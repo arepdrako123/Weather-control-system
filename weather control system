@@ -1,0 +1,29 @@
+print("welcome to weather control system")
+totaltemperature=0
+largest=None
+smallest=None
+true=0
+while (true < 3): 
+    print()
+    day=int(input("Today's day :"))
+    temp=float(input("temp in fahrenheit :"))
+    if smallest is None or smallest < temp:
+        smallest=temp
+    if largest is None or largest > temp:
+        largest=temp
+    print("________________________________")
+    celcius = (temp - 32)*5/9
+    print("day :",day)
+    print("Temp °F : " , temp)
+    print("Temp °C : " , celcius)
+    print('%0.1f degree Celsius is equal to %0.1f degree Fahrenheit' %(celcius,temp))#0.1f=round the number  
+    
+    true=true+1
+    totaltemperature=temp+totaltemperature
+      
+else:
+     print("total of three days temperature ")
+     print ("Maximum temperature is °F :", largest)
+     print ("Minimum temperature is °F :", smallest)
+     avg = totaltemperature/true
+     print("The average temperature in °F ", round(avg,2))
